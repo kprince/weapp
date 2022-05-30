@@ -26,7 +26,7 @@ type Color struct {
 type QRCode struct {
 	Path       string `json:"path"`
 	Width      int    `json:"width,omitempty"`
-	EnvVersion string `json:"envVersion,omitempty"`
+	EnvVersion string `json:"env_version,omitempty"`
 	AutoColor  bool   `json:"auto_color,omitempty"`
 	LineColor  *Color `json:"line_color,omitempty"`
 	IsHyaline  bool   `json:"is_hyaline,omitempty"`
@@ -55,7 +55,7 @@ type UnlimitedQRCode struct {
 	Page       string `json:"page,omitempty"`
 	Width      int    `json:"width,omitempty"`
 	CheckPath  bool   `json:"check_path,omitempty"`
-	EnvVersion string `json:"envVersion,omitempty"`
+	EnvVersion string `json:"env_version,omitempty"`
 	AutoColor  bool   `json:"auto_color,omitempty"`
 	LineColor  *Color `json:"line_color,omitempty"`
 	IsHyaline  bool   `json:"is_hyaline,omitempty"`
