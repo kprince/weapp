@@ -57,7 +57,7 @@ type UnlimitedQRCode struct {
 	CheckPath  bool   `json:"check_path,omitempty"`
 	EnvVersion string `json:"envVersion,omitempty"`
 	AutoColor  bool   `json:"auto_color,omitempty"`
-	LineColor  Color  `json:"line_color,omitempty"`
+	LineColor  *Color `json:"line_color,omitempty"`
 	IsHyaline  bool   `json:"is_hyaline,omitempty"`
 }
 
