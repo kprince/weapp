@@ -1,4 +1,4 @@
-module github.com/medivhzhan/weapp/v3
+module github.com/kprince/weapp/v3
 
 go 1.13
 
