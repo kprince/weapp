@@ -1,7 +1,7 @@
 package security
 
 import (
-	"github.com/medivhzhan/weapp/v3/request"
+	"github.com/kprince/weapp/v3/request"
 )
 
 type Security struct {

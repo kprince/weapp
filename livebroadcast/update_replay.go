@@ -1,6 +1,6 @@
 package livebroadcast
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 const apiUpdateReplay = "/wxaapi/broadcast/room/updatereplay"
 

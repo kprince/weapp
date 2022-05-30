@@ -1,6 +1,6 @@
 package weapp
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 const (
 	apiVerifySignature = "/cgi-bin/soter/verify_signature"

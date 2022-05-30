@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/medivhzhan/weapp/v3/logger"
+	"github.com/kprince/weapp/v3/logger"
 )
 
 type Request struct {

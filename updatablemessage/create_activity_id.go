@@ -1,6 +1,6 @@
 package updatablemessage
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 const apiCreateActivityId = "/cgi-bin/message/wxopen/activityid/create"
 

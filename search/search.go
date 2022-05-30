@@ -1,6 +1,6 @@
 package search
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 type Search struct {
 	request *request.Request

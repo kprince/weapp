@@ -1,6 +1,6 @@
 package subscribemessage
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 const apiGetTemplateList = "/wxaapi/newtmpl/gettemplate"
 

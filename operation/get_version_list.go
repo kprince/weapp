@@ -1,7 +1,7 @@
 package operation
 
 import (
-	"github.com/medivhzhan/weapp/v3/request"
+	"github.com/kprince/weapp/v3/request"
 )
 
 const apiGetVersionList = "/wxaapi/log/get_client_version"

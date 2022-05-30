@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/medivhzhan/weapp/v3/encrypt"
-	"github.com/medivhzhan/weapp/v3/request"
+	"github.com/kprince/weapp/v3/encrypt"
+	"github.com/kprince/weapp/v3/request"
 )
 
 // Server 微信通知服务处理器

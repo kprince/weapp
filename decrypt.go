@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/medivhzhan/weapp/v3/encrypt"
+	"github.com/kprince/weapp/v3/encrypt"
 )
 
 // DecryptUserData 解密用户数据

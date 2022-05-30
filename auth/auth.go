@@ -1,6 +1,6 @@
 package auth
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 // 用户信息
 type Auth struct {

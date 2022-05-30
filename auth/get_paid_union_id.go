@@ -1,6 +1,6 @@
 package auth
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 const apiGetPaidUnionId = "/wxa/getpaidunionid"
 

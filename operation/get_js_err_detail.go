@@ -1,6 +1,6 @@
 package operation
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 const apiGetJsErrDetail = "/wxaapi/log/jserr_detail"
 

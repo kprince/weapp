@@ -1,6 +1,6 @@
 package ocr
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 const apiBankcard = "/cv/ocr/bankcard"
 

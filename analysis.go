@@ -1,6 +1,6 @@
 package weapp
 
-import "github.com/medivhzhan/weapp/v3/request"
+import "github.com/kprince/weapp/v3/request"
 
 type dateRange struct {
 	BeginDate string `json:"begin_date"`
