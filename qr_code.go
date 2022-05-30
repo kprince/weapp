@@ -17,9 +17,9 @@ const (
 
 // Color QRCode color
 type Color struct {
-	R string `json:"r"`
-	G string `json:"g"`
-	B string `json:"b"`
+	R int `json:"r"`
+	G int `json:"g"`
+	B int `json:"b"`
 }
 
 // QRCode 小程序码参数
@@ -28,7 +28,7 @@ type QRCode struct {
 	Width      int    `json:"width,omitempty"`
 	EnvVersion string `json:"envVersion,omitempty"`
 	AutoColor  bool   `json:"auto_color,omitempty"`
-	LineColor  Color  `json:"line_color,omitempty"`
+	LineColor  *Color `json:"line_color,omitempty"`
 	IsHyaline  bool   `json:"is_hyaline,omitempty"`
 }
 
