@@ -51,22 +51,11 @@ func NewLogger(customLogger CustomLogger, level Level, colorful bool) Logger {
 	lg := logger{
 		customLogger: customLogger,
 		Colorful:     colorful,
-		info:         make([]*content, 0),
-		warn:         make([]*content, 0),
-		err:          make([]*content, 0),
-		Level:        level,
+		//info:         make([]*content, 0),
+		//warn:         make([]*content, 0),
+		//err:          make([]*content, 0),
+		Level: level,
 	}
-
-	if colorful {
-		lg.info = append(lg.info, &content{"[info] ", false, Green})
-		lg.warn = append(lg.warn, &content{"[warn] ", false, Magenta})
-		lg.err = append(lg.err, &content{"[error] ", false, Red})
-	} else {
-		lg.info = append(lg.info, &content{"[info] ", false, White})
-		lg.warn = append(lg.warn, &content{"[warn] ", false, White})
-		lg.err = append(lg.err, &content{"[error] ", false, White})
-	}
-
 	return &lg
 }
 
@@ -83,9 +72,40 @@ type content struct {
 	color   *color.Color
 }
 
+//resetInfo resets info logger
+func (l *logger) resetInfo() {
+	l.info = make([]*content, 0)
+	if l.Colorful {
+		l.info = append(l.info, &content{"[info] ", false, Green})
+	} else {
+		l.info = append(l.info, &content{"[info] ", false, White})
+	}
+}
+
+//resetWarn resets warn logger
+func (l *logger) resetWarn() {
+	l.warn = make([]*content, 0)
+	if l.Colorful {
+		l.warn = append(l.warn, &content{"[warn] ", false, Magenta})
+	} else {
+		l.warn = append(l.warn, &content{"[warn] ", false, White})
+	}
+}
+
+//resetErr resets err logger
+func (l *logger) resetErr() {
+	l.err = make([]*content, 0)
+	if l.Colorful {
+		l.err = append(l.err, &content{"[error] ", false, Red})
+	} else {
+		l.err = append(l.err, &content{"[error] ", false, White})
+	}
+}
+
 // Info print info
 func (l *logger) Info(ctx context.Context, msg string, data ...interface{}) {
 	if l.Level >= Info {
+		l.resetInfo()
 		l.info = append(l.info, &content{fmt.Sprintf(msg, data...), true, White})
 
 		for _, item := range l.info {
@@ -103,6 +123,7 @@ func (l *logger) Info(ctx context.Context, msg string, data ...interface{}) {
 // Warn print warn messages
 func (l *logger) Warn(ctx context.Context, msg string, data ...interface{}) {
 	if l.Level >= Warn {
+		l.resetWarn()
 		l.warn = append(l.warn, &content{fmt.Sprintf(msg, data...), true, White})
 
 		for _, item := range l.warn {
@@ -120,6 +141,7 @@ func (l *logger) Warn(ctx context.Context, msg string, data ...interface{}) {
 // Error print error messages
 func (l *logger) Error(ctx context.Context, msg string, data ...interface{}) {
 	if l.Level >= Error {
+		l.resetErr()
 		l.err = append(l.err, &content{fmt.Sprintf(msg, data...), true, White})
 
 		for _, item := range l.err {
